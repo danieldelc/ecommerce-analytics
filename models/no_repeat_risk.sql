@@ -71,4 +71,4 @@ END
 FROM
   users_order_stats_cte
 WHERE
-  first_second_order_days_diff IS NULL ;
+  first_second_order_days_diff IS NULL
