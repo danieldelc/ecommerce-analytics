@@ -63,11 +63,11 @@ WITH
 SELECT
   *,
   CASE
-    WHEN TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), first_order_delivered_at, DAY) > (avg_first_second_order_days_diff + 1.5*stddev_first_second_order_days_diff) THEN 1
+    WHEN TIMESTAMP_DIFF(CURRENT_TIMESTAMP(), first_order_delivered_at, DAY) > (avg_first_second_order_days_diff + 1.5*stddev_first_second_order_days_diff) THEN 'High'
   ELSE
-  0
+  'Low'
 END
-  AS at_risk
+  AS no_repeat_risk
 FROM
   users_order_stats_cte
 WHERE
