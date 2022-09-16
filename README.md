@@ -1,6 +1,6 @@
-# ecommerce-analytics
+# E-commerce Analytics
 
-Data analysis dashboard of repeating customers for an E-commerce.
+A dashboard for non-repeating customer risk analysis and monitoring.
 
 ## Technologies
 The project was created with:
